@@ -1,0 +1,41 @@
+﻿<html>
+
+<head>
+    <title>PrimeNG QuickStart</title>
+
+    <!-- CSS for PrimeUI -->
+    <link rel="stylesheet" type="text/css" href="libs/css/primeui.css" />
+
+    <!-- 1. Load libraries -->
+    <script src="libs/angular2-polyfills.js"></script>
+    <script src="libs/system.js"></script>
+
+    <!-- JS for PrimeUI -->
+    <script src="libs/jquery.js"></script>
+    <script src="libs/jquery-ui.js"></script>
+    <script src="libs/primeui.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+            defaultJSExtensions: true,
+            packages: {
+                "/angular2": {"defaultExtension": false}
+            },
+            map: {
+                'primeng': 'node_modules/primeng'
+            }
+        });
+        System.import('app/boot').then(null, console.error.bind(console));
+    </script>
+
+    <script src="libs/Rx.js"></script>
+    <script src="libs/angular2.dev.js"></script>
+</head>
+
+<!-- 3. Display the application -->
+<body>
+    <my-app>Loading...</my-app>
+</body>
+
+</html>
